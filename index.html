@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruby Hindi Language Tutor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Poppins&display=swap"
+    rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #scroll-text {
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      border: 1px solid #ddd;
+      background-color: #fff;
+    }
+
+    #scroll-text>div {
+      display: inline-block;
+      animation: scroll 20s linear infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+
+    /* Fade animation */
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .fade-in {
+      animation: fade-in 1.5s ease-out;
+    }
+
+    .poppins-regular {
+      font-family: "Poppins", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .bebas-neue-regular {
+      font-family: "Bebas Neue", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .lilita-one-regular {
+      font-family: "Lilita One", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 poppins-regular">
+  <!-- Fullscreen Loader -->
+  <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+    <div class="fade-in">
+      <img src="logo.jpg" alt="Logo" class="w-32 mx-auto mb-8 rounded-full">
+      <h1 class="poppins-regular text-2xl font-bold text-gray-800 text-center"><span class="text-green-600">Ruby</span> Hindi Tutor</h1>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="hidden">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-10 bg-white shadow-sm">
+      <nav class="container mx-auto flex items-center justify-between px-4 py-3">
+        <img src="logo.jpg" alt="Logo" class="h-10 rounded-full">
+        <ul class="flex gap-8 space-x-4 text-gray-500 font-bold hidden md:flex">
+          <li><a href="#" class="hover:text-gray-800">Home</a></li>
+          <li><a href="#contact" class="hover:text-gray-800">Contact</a></li>
+          <li><a href="#about" class="hover:text-gray-800">About</a></li>
+        </ul>
+        <a href="https://wa.me/+919361387392?text=Hi,mam i am Interested to learn Hindi!" 
+          class="flex items-center justify-center bg-gradient-to-r from-green-500 to-gray-500 hover:from-green-600 hover:to-gray-600 text-white px-4 py-2 rounded-lg" 
+          target="_blank" rel="noopener noreferrer">
+         Join Now
+         <img src="whatsapp.gif" class="w-6 h-6 ml-2 rounded-full" alt="whatsapp">
+       </a>
+       
+
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="container mx-auto px-8 md:px-24 grid grid-cols-1 md:grid-cols-2 items-center py-12 justify-center gap-14 text-center md:text-left my-3/5"
+      id="home">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          Speak <span class="text-green-500 typing-animation"></span> in 90 days from 0 to 99%
+        </h1>
+        <p class="text-gray-500 mb-6">"Transforming students to speak fluent hindi with <span
+            class="text-gray-600 font-bold">10+ years Experienced </span> trusted teaching!"</p>
+        <a href="https://wa.me/+919361387392?text=Hi,mam i am Interested to learn Hindi!" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg">Get Started</a>
+      </div>
+
+      <div>
+        <img src="hero.jpg" alt="Hero" class="w-full rounded-3xl fade-in">
+      </div>
+    </section>
+
+    <div id="scroll-text" class="text-gray-500 text-center text-2xl font-bold py-8 md:py-12 bebas-neue-regular">
+      <div>
+        Master Hindi 90 days - Join Us Now! Master Hindi Today - Join Us Now! Master Hindi Today - Join Us Now!
+      </div>
+      <div>
+        Master Hindi 90 days - Join Us Now! Master Hindi Today - Join Us Now! Master Hindi Today - Join Us Now!
+      </div>
+      <div>
+        Master Hindi 90 days - Join Us Now! Master Hindi Today - Join Us Now! Master Hindi Today - Join Us Now!
+      </div>
+
+    </div>
+
+
+
+    <!-- Reviews Section -->
+    <section class="bg-white py-12 my-10 px-8 md:px-24  rounded-2xl">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-8 poppins-regular">What Our Students Say</h2>
+        <div class="relative max-w-lg mx-auto">
+          <div id="reviews-carousel" class="bg-gray-100 shadow-lg rounded-lg p-8 text-center lilita-one-regular">
+            <!-- Review content will be dynamically injected -->
+          </div>
+        </div>
+        <!-- <div class="text-center mt-8">
+          <a href="#" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg ">See
+            All Reviews</a>
+        </div> -->
+      </div>
+    </section>
+
+
+
+    <!-- Description Section -->
+    <div class="px-10 md:px-24 " id="about">
+      <h2 class="text-4xl font-bold text-gray-800 mb-8 poppins-regular text-center">About Me</h2>
+
+      <p class="text-gray-600 text-lg mb-4 poppins-regular ">
+        Namaste! I’m <span class="text-green-600 font-bold">Ruby Thomas</span>, a passionate Hindi tutor with over <span
+          class="font-bold">10+ years</span> years of experience helping students achieve their language goals. I
+        specialize
+        in creating a comfortable and engaging learning environment, with aspiring co-learners.
+      </p>
+
+      <section class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-12">
+        <div>
+          <img src="hero.jpg" alt="Description" class="rounded-3xl shadow-lg fade-in">
+        </div>
+        <div class="shadow-lg rounded-2xl p-6 fade-in">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4 lilita-one-regular">Why Choose Us?</h2>
+          <ul class="list-disc list-inside text-gray-600 space-y-2 poppins-regular font-bold">
+            <li>Experienced 10+ years in teaching Hindi</li>
+            <li>Personalized Lessons</li>
+            <li>Intractive sessions with co-learners</li>
+            <li>Affordable Price</li>
+            <li>Flexible Schedules</li>
+            <li>100% Guaranteed Result</li>
+          </ul>
+          <a href="https://wa.me/+919361387392?text=Hi,mam i am Interested to learn Hindi!" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center bg-gradient-to-r from-green-500 to-gray-500 hover:from-green-600 hover:to-gray-600 text-white px-4 py-2 my-6 rounded-lg mx-auto">
+            Enquiry
+            <img src="whatsapp.gif" class="w-6 h-6 ml-2 rounded-full" alt="whatsapp">
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Newsletter Section -->
+    <!-- Newsletter Section -->
+    <section class="bg-white py-12" id="contact">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-8 poppins-regular">Stay Updated</h2>
+        <p class="text-gray-600 text-lg mb-6 poppins-regular">Subscribe to our newsletter for updates, tips, and more!
+        </p>
+        <form action="https://api.web3forms.com/submit" method="POST"
+          class="max-w-lg mx-auto bg-gray-50 p-6 rounded-lg shadow-lg" id="newsletterForm">
+
+          <!-- Include Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="b0d6c9a1-3592-495b-8684-61007f23d308">
+          <!-- Add Subject -->
+          <input type="hidden" name="subject" value="Mail from your Website">
+
+          <!-- User Inputs -->
+          <div class="mb-4">
+            <label for="name" class="block text-left text-gray-700 font-medium mb-2">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required
+              class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-500">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-left text-gray-700 font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required
+              class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-500">
+          </div>
+          <div class="mb-4">
+            <label for="description" class="block text-left text-gray-700 font-medium mb-2">Message</label>
+            <textarea id="description" name="description" placeholder="Tell us what you're looking for..." rows="4"
+              required class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:ring-2 focus:ring-green-500">
+        </textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit"
+            class="bg-gradient-to-r from-green-500 to-gray-500 hover:from-green-600 hover:to-gray-600 text-white px-6 py-3 rounded-lg font-medium w-full">
+            Subscribe
+          </button>
+        </form>
+
+        <!-- Success Message -->
+        <p id="successMessage" class="text-green-500 font-medium mt-6 hidden">Thank you for subscribing! We’ve received
+          your message.</p>
+      </div>
+    </section>
+
+
+
+
+
+
+    
+    <!-- Footer Section -->
+<footer class="bg-gray-800 text-white py-6">
+  <div class="container mx-auto px-4 text-center">
+    <p class="text-sm md:text-base poppins-regular">
+      &copy; 2025 Ruby Hindi Tutor. All Rights Reserved.
+    </p>
+    <p class="text-sm mt-2">
+      Designed with ❤️ by 
+      <a href="https://www.instagram.com/dhanush_webdev/" target="_blank" rel="noopener noreferrer" class="text-blue-500 underline">
+        dhanush_webdev
+      </a> contact @ instagram
+      
+    </p>
+    <!-- <div class="flex justify-center space-x-4 mt-4">
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <img src="facebook-icon.svg" alt="Facebook" class="w-6 h-6">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+        <img src="instagram-icon.svg" alt="Instagram" class="w-6 h-6">
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <img src="twitter-icon.svg" alt="Twitter" class="w-6 h-6">
+      </a>
+    </div> -->
+  </div>
+</footer>
+  </div>
+
+  <script>
+    // Simulating loader disappearance
+    window.onload = () => {
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('main-content').classList.remove('hidden');
+      }, 1000);
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const textElement = document.querySelector(".typing-animation");
+      textElement.textContent = "हिन्दी";
+    });
+    // Reviews Array with profile images
+    const reviews = [
+      {
+        text: "The best Hindi lessons I've ever had! The tutors are incredible.",
+        reviewer: "Priya Sharma",
+        image: "review1.jpg", // Add path to Priya's profile image
+      },
+      {
+        text: "My confidence in speaking Hindi has skyrocketed! Highly recommend.",
+        reviewer: "Arjun Verma",
+        image: "review2.jpg", // Add path to Arjun's profile image
+      },
+      {
+        text: "A wonderful learning experience! The personalized lessons are a game-changer.",
+        reviewer: "Meera Kapoor",
+        image: "review5.jpg", // Add path to Meera's profile image
+      },
+    ];
+
+    let currentReviewIndex = 0;
+
+    const carousel = document.getElementById('reviews-carousel');
+
+    const updateReview = () => {
+      const { text, reviewer, image } = reviews[currentReviewIndex];
+      carousel.innerHTML = `
+      <img src="${image}" alt="${reviewer}" class="w-16 h-16 rounded-full mx-auto mb-4">
+      <p class="text-gray-700 italic text-lg mb-6">
+        <span class="text-green-500 font-bold">"</span>
+        ${text}
+        <span class="text-green-500 font-bold">"</span>
+      </p>
+      <p class="text-gray-500 font-bold">- ${reviewer}</p>
+    `;
+      currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+    };
+
+    // Initial review
+    updateReview();
+
+    // Change reviews every 3 seconds
+    setInterval(updateReview, 3000);
+
+    //email submition
+
+    const form = document.getElementById('newsletterForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        // Show success message and reset form
+        successMessage.classList.remove('hidden');
+        form.reset();
+      } else {
+        // Handle error (optional)
+        alert('Something went wrong. Please try again later.');
+      }
+    });
+  </script>
+</body>
+
+</html>
